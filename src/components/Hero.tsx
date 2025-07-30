@@ -224,7 +224,7 @@ useEffect(() => {
 
       {/* Enhanced Scroll Indicator */}
     {showScrollDown && (
-  <div className="absolute bottom-52 left-1/2 transform -translate-x-1/2 z-10">
+  <div className="absolute bottom-52 left-1/2 transform -translate-x-1/2 z-10 hidden md:block">
     <div className="flex flex-col items-center gap-3 text-[#E6B400] animate-bounce cursor-pointer group">
       <span className="text-sm font-semibold tracking-wide group-hover:text-yellow-300 transition-colors duration-300">
         नीचे स्क्रॉल करें
