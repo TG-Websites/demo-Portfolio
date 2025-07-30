@@ -53,24 +53,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Media */}
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-white">सोशल मीडिया</h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.facebook.com/rajiv.singh.545402"
-                  className="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center hover:bg-[#E6B400] hover:text-black transition-all duration-300 group"
-                >
-                  <i className="fab fa-facebook-f text-lg"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/rajivkumar_.singh/?fbclid=..."
-                  className="w-12 h-12 bg-gray-800/50 rounded-lg flex items-center justify-center hover:bg-[#E6B400] hover:text-black transition-all duration-300 group"
-                >
-                  <i className="fab fa-instagram text-lg"></i>
-                </a>
-              </div>
-            </div>
+            
           </div>
 
           {/* Contact Form */}

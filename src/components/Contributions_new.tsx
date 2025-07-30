@@ -148,7 +148,33 @@ export default function Contributions() {
           ))}
         </div>
 
-       
+        {/* Enhanced Impact Statistics */}
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-3xl p-8 lg:p-12 border border-white/20 mb-16">
+          <h3 className="text-3xl font-bold text-center text-white mb-8">
+            <span className="text-[#E6B400]">Impact</span> Summary
+          </h3>
+          
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { number: "300+", label: "परियोजनाएं पूर्ण", icon: "🏗️" },
+              { number: "5000+", label: "परिवार लाभान्वित", icon: "👨‍👩‍👧‍👦" },
+              { number: "25+", label: "स्कूल सुधारे", icon: "🏫" },
+              { number: "10+", label: "वर्षों का अनुभव", icon: "⏱️" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group cursor-pointer">
+                <div className="text-4xl mb-3 transform group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl lg:text-4xl font-black text-[#E6B400] mb-2 group-hover:text-yellow-300 transition-colors duration-300">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Enhanced Call-to-Action */}
         <div className="text-center">

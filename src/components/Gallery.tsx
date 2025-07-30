@@ -16,15 +16,15 @@ export default function Gallery() {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-64 h-64 bg-[#E6B400]/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-80 h-80 bg-[#E6B400]/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <section id="gallery" className="py-20 bg-gradient-to-br from-gray-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Simple Background Effects */}
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#E6B400]/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-[#E6B400]/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Enhanced Header */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Clean Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-[#E6B400]/20 backdrop-blur-sm px-4 py-2 rounded-full border border-[#E6B400]/30 mb-6">
             <div className="w-2 h-2 bg-[#E6B400] rounded-full animate-pulse"></div>
@@ -32,21 +32,21 @@ export default function Gallery() {
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-transparent bg-gradient-to-r from-[#E6B400] to-yellow-300 bg-clip-text">हमारी </span>
+            <span className="text-transparent bg-gradient-to-r from-[#E6B400] to-yellow-300 bg-clip-text">हमारी</span>{" "}
             <span className="text-white">गैलरी</span>
           </h2>
           
           <p className="text-gray-400 text-lg leading-relaxed max-w-3xl mx-auto">
-            विकास, सेवा और समर्पण के पलों की एक झलक — आइए देखें हमारी यात्रा की कुछ झलकियां जो समुदाय के साथ हमारे जुड़ाव को दर्शाती हैं।
+            विकास, सेवा और समर्पण के पलों की एक झलक — आइए देखें हमारी यात्रा की कुछ झलकियां
           </p>
         </div>
 
-        {/* Enhanced Gallery Grid */}
+        {/* Clean Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {images.map((image, i) => (
             <div
               key={i}
-              className={`group relative overflow-hidden rounded-2xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-[#E6B400]/50 transition-all duration-700 ${
+              className={`group relative overflow-hidden rounded-2xl bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 hover:border-[#E6B400]/50 transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                 i === 0 ? 'lg:col-span-2 lg:row-span-2' : 
                 i === 3 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
@@ -56,7 +56,7 @@ export default function Gallery() {
                 <img
                   src={image.src}
                   alt={image.title}
-                  className={`w-full object-cover transition-all duration-700 group-hover:scale-110 ${
+                  className={`w-full object-cover transition-all duration-500 group-hover:scale-110 ${
                     i === 0 ? 'h-96 lg:h-full' : 'h-64'
                   }`}
                 />
@@ -68,10 +68,10 @@ export default function Gallery() {
                 <div className="absolute inset-0 p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
                   <div className="text-center">
                     <h3 className="text-white font-bold text-lg mb-2">{image.title}</h3>
-                    <p className="text-gray-300 text-sm">{image.desc}</p>
+                    <p className="text-gray-300 text-sm mb-4">{image.desc}</p>
                     
-                    {/* View Button */}
-                    <button className="mt-4 inline-flex items-center gap-2 bg-[#E6B400] text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-yellow-300 transition-colors">
+                    {/* Simple View Button */}
+                    <button className="inline-flex items-center gap-2 bg-[#E6B400] text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-yellow-300 transition-colors">
                       <span>देखें</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -80,21 +80,12 @@ export default function Gallery() {
                     </button>
                   </div>
                 </div>
-
-              
-
-                
-              </div>
-
-              {/* Shimmer Effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Statistics */}
+        {/* Simple Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           {[
             { number: "500+", label: "खुश परिवार" },
@@ -102,14 +93,14 @@ export default function Gallery() {
             { number: "10+", label: "वर्षों का अनुभव" },
             { number: "100%", label: "समर्पित सेवा" },
           ].map((stat, index) => (
-            <div key={index} className="text-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-[#E6B400]/50 transition-colors duration-300">
+            <div key={index} className="text-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-[#E6B400]/50 transition-all duration-300 hover:scale-105">
               <div className="text-3xl font-bold text-[#E6B400] mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
 
-        {/* Enhanced CTA */}
+        {/* Simple CTA */}
         <div className="text-center">
           <a
             href="./Gallery.html"
